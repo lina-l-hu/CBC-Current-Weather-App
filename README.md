@@ -1,5 +1,5 @@
 # CBC-Current-Weather-App
-React/Redux app that fetches the weather information for the user's current location from the OpenWeatherMap API through a GraphQL wrapper (GraphQL Weather API). 
+React/Redux app that fetches the weather information for the user's current location from the OpenWeatherMap API via a GraphQL wrapper (GraphQL Weather API). 
 
 ## Available Scripts
 
