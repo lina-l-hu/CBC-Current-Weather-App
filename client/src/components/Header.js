@@ -11,7 +11,7 @@ const Header = () => {
 }
 
 const Wrapper = styled.div`
-    margin: 30px;
+    margin: 50px;
 
     h1 { 
         font-family: Georgia, 'Times New Roman', Times, serif;

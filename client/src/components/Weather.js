@@ -59,7 +59,7 @@ const Weather = ({getWeather}) => {
 }
 
 const Wrapper = styled.div`
-    width: 55vw;
+    width: 40vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -113,6 +113,7 @@ const Text = styled.div`
 `;
 
 const ActualTemp = styled.div`
+    margin: 10px 0;
 `;
 
 const Description = styled.div`

@@ -20,8 +20,10 @@ const Wrapper = styled.div`
     padding: 30px;
 
     button {
-        font-size: 20px;
-        padding: 10px 20px;
+        font-size: 23px;
+        padding: 15px 25px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-style: italic;
     }
 `;
 
