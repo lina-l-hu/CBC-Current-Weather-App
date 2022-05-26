@@ -1,9 +1,13 @@
+//Redux data store
+
 import { configureStore } from "@reduxjs/toolkit";
-import locationReducer from "../reducers/locationReducer";
+import coordinatesReducer from "../reducers/coordinatesReducer";
 import weatherReducer from "../reducers/weatherReducer";
+import cityReducer from "../reducers/cityReducer"
 
 const store = configureStore({
-    reducer: { location: locationReducer, 
+    reducer: {  coordinates: coordinatesReducer, 
+                city: cityReducer,
                 weather: weatherReducer
             }
 });

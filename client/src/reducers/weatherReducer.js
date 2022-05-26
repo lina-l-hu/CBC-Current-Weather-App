@@ -1,20 +1,26 @@
+//reducer to manage weather data fetched from GraphQL Weather API provided
+
 const initialState = {
-    status: "loading", //possible status: loading, idle, error
+    weatherStatus: "loading", //possible status: loading, idle, error
     weather: null,
+    error: null
 }
 
 const weatherReducer = (state = initialState, action) => {
+
     switch (action.type) {
-        case "weather-loaded" : {
+        
+        case "RETRIEVE_WEATHER" : {
             return {
-                status: "idle", 
-                coordinates: action.weather
+                weatherStatus: "idle", 
+                weather: action.weather
             }
         }
 
-        case "loading-weather-error" : {
+        case "RETRIEVE_WEATHER_ERROR" : {
            return {
-                status: "error"
+                weatherStatus: "error",
+                error: action.error
            }
         }
 
