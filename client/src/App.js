@@ -4,6 +4,7 @@ import styled from "styled-components";
 import GlobalStyles from "./GlobalStyles";
 import Header from "./components/Header";
 import Weather from "./components/Weather"
+import LoadingComponent from "./components/LoadingComponent";
 
 function App() {
 
@@ -153,9 +154,10 @@ function App() {
         <Page>
             <GlobalStyles />
             <Header />
-            {(weatherStatus === "idle" && 
+            {(weatherStatus === "idle") ?  (
                 <Weather getWeather={getWeather}/>
-            )}
+            ) : (<LoadingComponent />)
+            }
         </Page>
     );
 }

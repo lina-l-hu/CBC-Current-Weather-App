@@ -5,7 +5,7 @@ const LoadingComponent = () => {
     
     return (
         <Wrapper>
-            <div className="lds-dual-ring"></div>
+            <div class="loader">Loading...</div>
         </Wrapper>
         
     )
@@ -18,31 +18,69 @@ const Wrapper = styled.div`
     align-items: center;
     height: 75%;
 
-    .lds-dual-ring {
-  display: inline-block;
-  width: 80px;
-  height: 80px;
-}
-.lds-dual-ring:after {
-  content: " ";
-  display: block;
-  width: 64px;
-  height: 64px;
-  margin: 8px;
-  border-radius: 50%;
-  border: 6px solid #fff;
-  border-color: #fff transparent #fff transparent;
-  animation: lds-dual-ring 1.2s linear infinite;
-}
-@keyframes lds-dual-ring {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
+    .loader {
+    font-size: 10px;
+    margin: 50px auto;
+    text-indent: -9999em;
+    width: ${props => (props.forButton) ? "1.5em" : "5em"};
+    height: ${props => (props.forButton) ? "1.5em" : "5em"};
+    border-radius: 50%;
+    background: var(--color-main);
+    background: -moz-linear-gradient(left, var(--color-main) 10%, rgba(255, 255, 255, 0) 42%);
+    background: -webkit-linear-gradient(left, var(--color-main) 10%, rgba(255, 255, 255, 0) 42%);
+    background: -o-linear-gradient(left, var(--color-main) 10%, rgba(255, 255, 255, 0) 42%);
+    background: -ms-linear-gradient(left, var(--color-main) 10%, rgba(255, 255, 255, 0) 42%);
+    background: linear-gradient(to right, var(--color-main) 10%, rgba(255, 255, 255, 0) 42%);
+    position: relative;
+    -webkit-animation: load3 1.4s infinite linear;
+    animation: load3 1.4s infinite linear;
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0);
+    }
+    .loader:before {
+    width: 50%;
+    height: 50%;
+    background: var(--color-main);
+    border-radius: 100% 0 0 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: '';
+    }
+    .loader:after {
+    background: #ffffff;
+    width: 75%;
+    height: 75%;
+    border-radius: 50%;
+    content: '';
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    }
+    @-webkit-keyframes load3 {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+    }
+    @keyframes load3 {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+    }
 
 `;
 
