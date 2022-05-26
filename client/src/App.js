@@ -2,8 +2,8 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import styled from "styled-components";
 import GlobalStyles from "./GlobalStyles";
-import Header from "./Header";
-import Weather from "./Weather"
+import Header from "./components/Header";
+import Weather from "./components/Weather"
 
 function App() {
 
