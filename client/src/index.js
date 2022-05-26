@@ -4,11 +4,6 @@ import App from './App';
 import { Provider } from "react-redux";
 import store from "./store/store"
 
-
-// const store = configureStore (
-//   rootReducer, 
-//   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
-
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(

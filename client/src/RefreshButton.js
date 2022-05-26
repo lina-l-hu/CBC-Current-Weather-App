@@ -1,9 +1,10 @@
+//Button to call the fetch function to obtain current weather data
+
 import styled from "styled-components";
 
-const RefreshButton = () => {
-
+const RefreshButton = ({getWeather}) => {
     const handleRefresh = () => {
-        
+        getWeather();
     }
 
     return (
@@ -16,11 +17,11 @@ const RefreshButton = () => {
 const Wrapper = styled.div`
     display: flex;
     justify-content: center;
-    margin: 20px;
+    padding: 30px;
 
     button {
-        font-size: 30px;
-        padding: 20px;
+        font-size: 20px;
+        padding: 10px 20px;
     }
 `;
 
