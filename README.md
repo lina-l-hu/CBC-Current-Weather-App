@@ -11,7 +11,7 @@ to start client in development mode at [http://localhost:3000](http://localhost:
 
 To be run in tandem with the [GraphQL Weather API app](https://github.com/konstantinmuenster/graphql-weather-api) at [http://localhost:4000](http://localhost:4000).
 
-Please go to [https://openweathermap.org/api](https://openweathermap.org/api) and generate your own API key to use with this app. 
+Please go to [https://openweathermap.org/api](https://openweathermap.org/api) and generate your own API key to use for both these apps. 
 
 
 ## File Structure
